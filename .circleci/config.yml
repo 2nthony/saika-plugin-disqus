@@ -4,8 +4,7 @@ workflows:
   env-vars:
     jobs:
       - build:
-          context:
-            - semantic-release
+          context: semantic-release
 
 jobs:
   build:
