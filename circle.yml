@@ -1,11 +1,4 @@
-version: 2.1
-
-workflows:
-  env-vars:
-    jobs:
-      - build:
-          context: semantic-release
-
+version: 2
 jobs:
   build:
     docker:
