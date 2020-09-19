@@ -10,6 +10,10 @@ Please consider starring the project to show your ❤️ and support.
 [![License](https://badgen.net/npm/license/saika-plugin-disqus)](./LICENSE)
 [![donate](https://badgen.net/badge/support%20me/donate/f2a)](https://donate.evila.me)
 
+## Showcase
+
+You can see the showcase in [this page](https://saika-theme-portfolio-demo.saika.dev/#/posts/my-first-post).
+
 ## Usage
 
 Load this plugin via `<script>` tag:
