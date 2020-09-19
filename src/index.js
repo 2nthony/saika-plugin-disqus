@@ -11,11 +11,12 @@ export default (options = {}) => ({
 
   extend: api => {
     api.registerComponent('content:end', {
-      render: h =>
-        h('div', {
+      render: h => {
+        return h('div', {
           attrs: { id: 'disqus_thread' },
           style: { marginTop: '20px' }
-        }),
+        })
+      },
 
       mounted() {
         if (!checkEnable()) return
@@ -29,9 +30,10 @@ export default (options = {}) => ({
       }
     })
 
+    const routePath = api.router.currentRoute.path
     const page = {
-      url: window.location.origin + api.router.currentRoute.path,
-      identifier: api.router.currentRoute.path,
+      url: window.location.origin + routePath,
+      identifier: routePath,
       title: api.store.state.postLinkMeta.title
     }
 
@@ -57,11 +59,10 @@ export default (options = {}) => ({
     }
 
     function checkEnable() {
-      const { path } = api.router.currentRoute
       const enablePaths = options.enablePaths || ['/posts']
 
       for (let i = 0; i < enablePaths.length; i++) {
-        if (path.indexOf(enablePaths[i]) !== -1) return true
+        if (routePath.indexOf(enablePaths[i]) !== -1) return true
       }
 
       return false
