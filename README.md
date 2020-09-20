@@ -14,6 +14,10 @@ Please consider starring the project to show your ❤️ and support.
 
 You can see the showcase in [this page](https://saika-theme-portfolio-demo.saika.dev/#/posts/my-first-post).
 
+## Prerequisite
+
+- [Saika](https://saika.dev)
+
 ## Usage
 
 Load this plugin via `<script>` tag:
